@@ -1,0 +1,306 @@
+html {
+  color: white;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+.ZeZeLogo {
+  display: block;
+  height: 10%;
+  width: 10%;
+  margin: auto;
+  max-height: 70px;
+  z-index: 10;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  scroll-snap-align: start;
+  background-image: url(/Images/ZeZeCheese_Background_V2.png);
+}
+
+header {
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  border-style: solid;
+  border-width: 5px;
+  border: #A2A2A2;
+  max-height: 70px;
+}
+
+.topbar {
+  border-style: solid;
+  border-width: 5px;
+  border-top: #A2A2A2;
+  border-left: #A2A2A2;
+  border-right: #A2A2A2;
+  z-index: 1;
+}
+
+.bottombar {
+  position: fixed;
+  bottom: 0;
+  border-color: #A2A2A2;
+  border-width: 5px;
+  border-style: solid;
+  border-left: #000;
+  border-bottom: #000;
+  border-right: #000;
+  z-index: 1;
+  height: 10%;
+}
+
+footer {
+  max-height: 70px;
+  width: 100%;
+  background-color: #000;
+}
+
+.main_container,
+.Support_container {
+  width: 30%;
+  min-height: 10%;
+  border-color: #A2A2A2;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 35px;
+  background-color: #000;
+  position: relative;
+  left: 25%;
+  top: 28%;
+  padding: 10%;
+  text-align: center;
+}
+
+div.Icons {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 25px;
+}
+
+.Icon {
+  max-block-size: 70px;
+  min-block-size: 7px;
+  margin: 0.5%;
+  transition: 500ms;
+}
+
+#ABME,
+#PRJT,
+#CV {
+  color: #fbd633;
+  text-shadow: 2px 2px 5px #fbd633;
+  width: 30%;
+  font-size: 10vh;
+  font-family: Agbalumo;
+  background-color: #000;
+  border-color: #fbd633;
+  border-style: solid;
+  border-radius: 25px;
+  position: relative;
+  left: 34.8%;
+  top: 15%;
+  text-align: center;
+  padding: 0.2%;
+}
+
+.Profiel {
+  max-width: 16%;
+  height: auto;
+  display: block;
+  position: relative;
+  border: #A2A2A2;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 25px;
+  padding: 0.2%;
+  left: 1%;
+  top: 13%;
+}
+
+.Second_container {
+  font-size: 3vh;
+  margin-top: -10%;
+  width: 50%;
+  min-height: 10%;
+  border-color: #A2A2A2;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 35px;
+  background-color: #000;
+  position: relative;
+  left: 20%;
+  top: 0%;
+  padding: 5%;
+  text-align: center;
+}
+
+.pro,
+.rek,
+.snake,
+.iri {
+  background-color: #000;
+  max-width: 16%;
+  height: auto;
+  position: relative;
+  border: #A2A2A2;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 25px;
+  padding: 0.2%;
+  left: 15.8%;
+  margin-top: 11%;
+  padding: 0.2%;
+  animation-name: animation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transition: 500ms;
+}
+
+.docu {
+  width: 20%;
+  min-height: 10%;
+  border-color: #A2A2A2;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 35px;
+  background-color: #000;
+  position: relative;
+  left: 40%;
+  text-align: center;
+  margin-top: 5%;
+  transition: 500ms;
+}
+
+@keyframes animation {
+  from {
+    background-color: #000;
+  }
+
+  to {
+    background-color: #fbd633;
+  }
+}
+
+.Icon:hover,
+.pro:hover,
+.docu:hover,
+.rek:hover,
+.snake:hover,
+.iri:hover {
+  transform: scale(1.1, 1.1);
+}
+
+#phone:hover .tooltiptext5 {
+  visibility: visible;
+}
+
+:root {
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px;
+  --foreground: #fff;
+  --background: #000;
+  --hamburger-margin: 8px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  position: absolute;
+  margin-top: -3.5%;
+  left: var(--hamburger-margin);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hamburger-menu:has(input:checked) {
+  --foreground: #fff;
+  --background: #000;
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.sidebar {
+  transition: translate var(--animation-timing);
+  translate: -100%;
+  padding: 0.5rem 1rem;
+  padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+  background-color: var(--background);
+  color: var(--background);
+  max-width: 10rem;
+  min-height: 100vh;
+}
+
+.hamburger-menu:has(input:checked)+.sidebar {
+  translate: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fbd633;
+  font-size: 150%;
+}
