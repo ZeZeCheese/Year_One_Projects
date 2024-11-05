@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index Change on Click</title>
+    <style>
+        .draggable-container {
+            position: relative;
+        }
+
+        .draggable {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="draggable-container">
+        <div class="draggable" id="draggableElement" onclick="bringToFront('draggableElement')">Blue</div>
+        <div class="draggable red" id="draggableElement2" onclick="bringToFront('draggableElement2')">Red</div>
+        <div class="draggable green" id="draggableElement3" onclick="bringToFront('draggableElement3')">Green</div>
+        <div class="draggable yellow" id="draggableElement4" onclick="bringToFront('draggableElement4')">Yellow</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var draggableElements = document.querySelectorAll('.draggable');
+            var droppableElements = document.querySelectorAll('.droppable');
+            var rollDiceButton = document.getElementById('rollDiceButton');
+            var diceResult = document.getElementById('diceResult');
+
+            var activeDraggableElement = null;
+            var offsetX, offsetY;
+
+            draggableElements.forEach(function (draggableElement) {
+                draggableElement.addEventListener('mousedown', function (e) {
+                    e.preventDefault();
+                    activeDraggableElement = draggableElement;
+                    offsetX = e.clientX - draggableElement.getBoundingClientRect().left;
+                    offsetY = e.clientY - draggableElement.getBoundingClientRect().top;
+
+                    bringToFront(draggableElement.id); // Bring the draggable element to the front
+
+                    document.addEventListener('mousemove', onMouseMove);
+                    document.addEventListener('mouseup', onMouseUp);
+                });
+            });
+
+            function bringToFront(elementId) {
+                var elements = document.querySelectorAll('.draggable');
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].style.zIndex = 1; // Reset all zIndex values
+                }
+                var targetElement = document.getElementById(elementId);
+                targetElement.style.zIndex = 2; // Bring the clicked element to the front
+            }
+
+            function onMouseMove(e) {
+                if (activeDraggableElement) {
+                    activeDraggableElement.style.left = e.clientX - offsetX + 'px';
+                    activeDraggableElement.style.top = e.clientY - offsetY + 'px';
+                }
+            }
+
+            function onMouseUp() {
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+
+                // Check if the draggable element is dropped near any of the droppable elements
+                droppableElements.forEach(function (droppableElement) {
+                    var rect = droppableElement.getBoundingClientRect();
+                    if (
+                        activeDraggableElement.offsetLeft + activeDraggableElement.offsetWidth / 2 >= rect.left &&
+                        activeDraggableElement.offsetLeft + activeDraggableElement.offsetWidth / 2 <= rect.right &&
+                        activeDraggableElement.offsetTop + activeDraggableElement.offsetHeight / 2 >= rect.top &&
+                        activeDraggableElement.offsetTop + activeDraggableElement.offsetHeight / 2 <= rect.bottom
+                    ) {
+                        // Set the draggable element's position to the center of the droppable element
+                        activeDraggableElement.style.left = rect.left + (rect.width - activeDraggableElement.offsetWidth) / 2 + 'px';
+                        activeDraggableElement.style.top = rect.top + (rect.height - activeDraggableElement.offsetHeight) / 2 + 'px';
+                    }
+                });
+
+                activeDraggableElement.style.zIndex = 1; // Restore the original z-index
+                activeDraggableElement = null;
+            }
+
+            // Roll dice functionality
+            rollDiceButton.addEventListener('click', function () {
+                var randomNumber = Math.floor(Math.random() * 6) + 1; // Generate random number between 1 and 6
+                diceResult.textContent = 'Dice result: ' + randomNumber;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

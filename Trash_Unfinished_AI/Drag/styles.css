@@ -1,0 +1,741 @@
+body {
+    overflow-x: hidden;
+    background: rgb(153, 216, 222);
+    background: radial-gradient(circle, rgba(153, 216, 222, 1) 30%, rgba(28, 145, 179, 1) 100%);
+}
+
+p {
+    text-align: center;
+    color: rgb(34, 15, 141);
+    margin: -1px;
+}
+
+.minus {
+    color: rgb(255, 255, 255);
+    margin-top: -25px;
+    margin-right: -40px;
+    font-weight: bolder;
+}
+
+.plus {
+    color: rgb(0, 0, 0);
+    margin-top: -25px;
+    margin-right: -40px;
+    font-weight: bolder;
+
+}
+
+.droppable {
+    width: 100px;
+    height: 100px;
+    border: 8px solid rgba(103, 125, 176, 0.523);
+    position: absolute;
+    border-radius: 35px;
+    box-sizing: border-box;
+    background: rgb(153, 222, 153);
+    background: radial-gradient(circle, rgba(153, 222, 153, 1) 30%, rgba(28, 145, 179, 1) 100%);
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.draggable {
+    width: 84px;
+    height: 84px;
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: seagreen;
+}
+
+.yellow {
+    background-color: gold;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border: 1px solid gray;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dice-con {
+    top: 420px;
+    left: -18px;
+    position: relative;
+}
+
+#diceResult {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    padding-top: 1%;
+    margin-left: 5px;
+}
+
+#droppableB {
+    top: 300px;
+    left: 0px;
+    background: rgb(55, 255, 216);
+    background: radial-gradient(circle, rgba(55, 255, 216, 1) 30%, rgba(10, 19, 99, 1) 100%);
+    border: 8px solid rgba(6, 28, 74, 0.523);
+    cursor: pointer;
+}
+
+#droppableR {
+    top: 300px;
+    left: 100px;
+    background: rgb(255, 55, 55);
+    background: radial-gradient(circle, rgba(255, 55, 55, 1) 30%, rgba(99, 10, 10, 1) 100%);
+    border: 8px solid rgba(95, 1, 74, 0.523);
+    cursor: pointer;
+}
+
+#droppableY {
+    top: 400px;
+    left: 0px;
+    background: rgb(255, 253, 55);
+    background: radial-gradient(circle, rgba(255, 253, 55, 1) 30%, rgba(99, 98, 10, 1) 100%);
+    border: 8px solid rgba(95, 89, 74, 0.523);
+    cursor: pointer;
+}
+
+#droppableG {
+    top: 400px;
+    left: 100px;
+    background: rgb(163, 255, 55);
+    background: radial-gradient(circle, rgba(163, 255, 55, 1) 30%, rgba(64, 99, 10, 1) 100%);
+    border: 8px solid rgba(60, 90, 74, 0.523);
+    cursor: pointer;
+}
+
+#droppable0 {
+    top: 50px;
+    left: 50px;
+    background-image: url(Images/starttile.jpg);
+    background-size: cover;
+    /* Cover the entire container */
+    background-position: center;
+    /* Center the background image */
+    border-radius: 35px;
+    /* Set the border radius */
+    overflow: hidden;
+    /* Hide overflow content */
+    border: solid 8px rgb(208, 0, 255);
+
+}
+
+#droppable1 {
+    top: 50px;
+    left: 200px;
+}
+
+#droppable2 {
+    top: 50px;
+    left: 300px;
+    border: solid 8px rgb(185, 234, 87);
+    text-align: end;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(239, 245, 83);
+    background: radial-gradient(circle, rgba(239, 245, 83, 1) 30%, rgba(176, 245, 158, 1) 100%);
+}
+
+#droppable3 {
+    top: 50px;
+    left: 400px;
+}
+
+#droppable4 {
+    top: 50px;
+    left: 500px;
+}
+
+#droppable5 {
+    top: 50px;
+    left: 600px;
+    background-image: url(Images/kans.png);
+    background-size: cover;
+    /* Cover the entire container */
+    background-position: center;
+    /* Center the background image */
+    border-radius: 35px;
+    /* Set the border radius */
+    overflow: hidden;
+    /* Hide overflow content */
+    border: solid 8px rgb(255, 255, 0);
+}
+
+#droppable6 {
+    top: 50px;
+    left: 700px;
+}
+
+#droppable7 {
+    top: 50px;
+    left: 800px;
+    border: solid 8px rgb(231, 71, 71);
+    text-align: end;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(222, 153, 185);
+    background: radial-gradient(circle, rgba(222, 153, 185, 1) 30%, rgba(235, 80, 46, 1) 100%);
+}
+
+#droppable8 {
+    top: 50px;
+    left: 900px;
+}
+
+#droppable9 {
+    top: 50px;
+    left: 1000px;
+}
+
+#droppable10 {
+    top: 50px;
+    left: 1100px;
+}
+
+#droppable11 {
+    top: 50px;
+    left: 1200px;
+    background-image: url(Images/kans.png);
+    background-size: cover;
+    /* Cover the entire container */
+    background-position: center;
+    /* Center the background image */
+    border-radius: 35px;
+    /* Set the border radius */
+    overflow: hidden;
+    /* Hide overflow content */
+    border: solid 8px rgb(255, 255, 0);
+}
+
+#droppable12 {
+    top: 50px;
+    left: 1300px;
+}
+
+#droppable13 {
+    top: 50px;
+    left: 1400px;
+}
+
+#droppable14 {
+    top: 150px;
+    left: 1400px;
+}
+
+#droppable15 {
+    top: 250px;
+    left: 1400px;
+    border: solid 8px rgb(185, 234, 87);
+    text-align: end;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(239, 245, 83);
+    background: radial-gradient(circle, rgba(239, 245, 83, 1) 30%, rgba(176, 245, 158, 1) 100%);
+}
+
+#droppable16 {
+    top: 250px;
+    left: 1300px;
+    border: solid 8px rgb(231, 71, 71);
+    text-align: end;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(222, 153, 185);
+    background: radial-gradient(circle, rgba(222, 153, 185, 1) 30%, rgba(235, 80, 46, 1) 100%);
+}
+
+#droppable17 {
+    top: 250px;
+    left: 1200px;
+}
+
+#droppable18 {
+    top: 250px;
+    left: 1100px;
+}
+
+#droppable19 {
+    top: 250px;
+    left: 1000px;
+    background-image: url(Images/kans.png);
+    background-size: cover;
+    /* Cover the entire container */
+    background-position: center;
+    /* Center the background image */
+    border-radius: 35px;
+    /* Set the border radius */
+    overflow: hidden;
+    /* Hide overflow content */
+    border: solid 8px rgb(255, 255, 0);
+}
+
+#droppable20 {
+    top: 250px;
+    left: 900px;
+}
+
+#droppable21 {
+    top: 250px;
+    left: 800px;
+}
+
+#droppable22 {
+    top: 250px;
+    left: 700px;
+}
+
+#droppable23 {
+    top: 250px;
+    left: 600px;
+}
+
+#droppable24 {
+    top: 250px;
+    left: 500px;
+    border: solid 8px rgb(231, 71, 71);
+    text-align: end;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(222, 153, 185);
+    background: radial-gradient(circle, rgba(222, 153, 185, 1) 30%, rgba(235, 80, 46, 1) 100%);
+}
+
+#droppable25 {
+    top: 250px;
+    left: 400px;
+    border: solid 8px rgb(185, 234, 87);
+    text-align: end;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(239, 245, 83);
+    background: radial-gradient(circle, rgba(239, 245, 83, 1) 30%, rgba(176, 245, 158, 1) 100%);
+}
+
+#droppable26 {
+    top: 250px;
+    left: 300px;
+}
+
+#droppable27 {
+    top: 250px;
+    left: 200px;
+    background-image: url(Images/kans.png);
+    background-size: cover;
+    /* Cover the entire container */
+    background-position: center;
+    /* Center the background image */
+    border-radius: 35px;
+    /* Set the border radius */
+    overflow: hidden;
+    /* Hide overflow content */
+    border: solid 8px rgb(255, 255, 0);
+}
+
+#droppable28 {
+    top: 350px;
+    left: 200px;
+}
+
+#droppable29 {
+    top: 450px;
+    left: 200px;
+}
+
+#droppable30 {
+    top: 450px;
+    left: 300px;
+}
+
+#droppable31 {
+    top: 450px;
+    left: 400px;
+    border: solid 8px rgb(231, 71, 71);
+    text-align: end;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(222, 153, 185);
+    background: radial-gradient(circle, rgba(222, 153, 185, 1) 30%, rgba(235, 80, 46, 1) 100%);
+}
+
+#droppable32 {
+    top: 450px;
+    left: 500px;
+}
+
+#droppable33 {
+    top: 450px;
+    left: 600px;
+}
+
+#droppable34 {
+    top: 450px;
+    left: 700px;
+    background-image: url(Images/kans.png);
+    background-size: cover;
+    /* Cover the entire container */
+    background-position: center;
+    /* Center the background image */
+    border-radius: 35px;
+    /* Set the border radius */
+    overflow: hidden;
+    /* Hide overflow content */
+    border: solid 8px rgb(255, 255, 0);
+}
+
+#droppable35 {
+    top: 450px;
+    left: 800px;
+}
+
+#droppable36 {
+    top: 450px;
+    left: 900px;
+}
+
+#droppable37 {
+    top: 450px;
+    left: 1000px;
+    border: solid 8px rgb(185, 234, 87);
+    text-align: end;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(239, 245, 83);
+    background: radial-gradient(circle, rgba(239, 245, 83, 1) 30%, rgba(176, 245, 158, 1) 100%);
+}
+
+#droppable38 {
+    top: 450px;
+    left: 1100px;
+}
+
+#droppable39 {
+    top: 450px;
+    left: 1200px;
+}
+
+#droppable40 {
+    top: 450px;
+    left: 1300px;
+}
+
+#droppable41 {
+    top: 450px;
+    left: 1400px;
+}
+
+#droppable42 {
+    top: 550px;
+    left: 1400px;
+    background-image: url(Images/kans.png);
+    background-size: cover;
+    /* Cover the entire container */
+    background-position: center;
+    /* Center the background image */
+    border-radius: 35px;
+    /* Set the border radius */
+    overflow: hidden;
+    /* Hide overflow content */
+    border: solid 8px rgb(255, 255, 0);
+}
+
+#droppable43 {
+    top: 650px;
+    left: 1400px;
+}
+
+#droppable44 {
+    top: 650px;
+    left: 1300px;
+}
+
+#droppable45 {
+    top: 650px;
+    left: 1200px;
+    border: solid 8px rgb(231, 71, 71);
+    text-align: end;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(222, 153, 185);
+    background: radial-gradient(circle, rgba(222, 153, 185, 1) 30%, rgba(235, 80, 46, 1) 100%);
+}
+
+#droppable46 {
+    top: 650px;
+    left: 1100px;
+}
+
+#droppable47 {
+    top: 650px;
+    left: 1000px;
+    background-image: url(Images/kans.png);
+    background-size: cover;
+    /* Cover the entire container */
+    background-position: center;
+    /* Center the background image */
+    border-radius: 35px;
+    /* Set the border radius */
+    overflow: hidden;
+    /* Hide overflow content */
+    border: solid 8px rgb(255, 255, 0);
+}
+
+#droppable48 {
+    top: 650px;
+    left: 900px;
+}
+
+#droppable49 {
+    top: 650px;
+    left: 800px;
+}
+
+#droppable50 {
+    top: 650px;
+    left: 700px;
+    border: solid 8px rgb(185, 234, 87);
+    text-align: end;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(239, 245, 83);
+    background: radial-gradient(circle, rgba(239, 245, 83, 1) 30%, rgba(176, 245, 158, 1) 100%);
+}
+
+#droppable51 {
+    top: 650px;
+    left: 600px;
+}
+
+#droppable52 {
+    top: 650px;
+    left: 500px;
+}
+
+#droppable53 {
+    top: 650px;
+    left: 400px;
+    border: solid 8px rgb(231, 71, 71);
+    text-align: end;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(222, 153, 185);
+    background: radial-gradient(circle, rgba(222, 153, 185, 1) 30%, rgba(235, 80, 46, 1) 100%);
+}
+
+#droppable54 {
+    top: 650px;
+    left: 300px;
+    border: solid 8px rgb(231, 71, 71);
+    text-align: end;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(231, 71, 71);
+    background: rgb(222, 153, 185);
+    background: radial-gradient(circle, rgba(222, 153, 185, 1) 30%, rgba(235, 80, 46, 1) 100%);
+}
+
+#droppable55 {
+    top: 650px;
+    left: 200px;
+    border: solid 8px rgb(231, 71, 71);
+    text-align: end;
+    padding: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(231, 71, 71);
+    background: rgb(222, 153, 185);
+    background: radial-gradient(circle, rgba(222, 153, 185, 1) 30%, rgba(235, 80, 46, 1) 100%);
+}
+
+#droppable56 {
+    top: 650px;
+    left: 50px;
+    background-image: url(Images/endtile.png);
+    background-size: cover;
+    /* Cover the entire container */
+    background-position: center;
+    /* Center the background image */
+    border-radius: 35px;
+    /* Set the border radius */
+    overflow: hidden;
+    /* Hide overflow content */
+    border: solid 8px rgb(208, 0, 255);
+}
+
+/* CSS */
+.roll {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    border-radius: 50px;
+}
+
+.roll:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+
+@media (min-width: 768px) {
+    .button-54 {
+        padding: 0.25em 0.75em;
+    }
+}
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.dice {
+    font-size: 7rem;
+    margin: 5px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.roll-animation {
+    animation-name: roll;
+}
+
+@keyframes roll {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateY(720deg) rotateX(720deg);
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+li {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: #f2f2f2;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li span {
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+#dice {
+    position: relative;
+    top: 315px;
+    left: -18px;
+}

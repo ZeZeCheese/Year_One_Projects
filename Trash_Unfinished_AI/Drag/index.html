@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+    <div class="dice" id="dice">&#9860;</div>
+
+
+
+
+    <div class="draggable" id="draggableElement">Blue</div>
+    <div class="draggable red" id="draggableElement2">Red</div>
+    <div class="draggable yellow" id="draggableElement3">Yellow</div>
+    <div class="draggable green" id="draggableElement4">Green</div>
+
+
+
+    <div class="droppable" id="droppable0"></div>
+
+    <div class="droppable" id="droppableB" onclick="bringToFront('draggableElement')">
+
+    </div>
+    <div class="droppable" id="droppableR" onclick="bringToFront('draggableElement2')">
+
+    </div>
+    <div class="droppable" id="droppableY" onclick="bringToFront('draggableElement3')">
+
+    </div>
+    <div class="droppable" id="droppableG" onclick="bringToFront('draggableElement4')">
+
+    </div>
+
+
+    <div class="droppable" id="droppable1">
+        <p>1</p>
+    </div>
+    <div class="droppable" id="droppable2">
+        <p class="plus">+4</p>
+        <p class="number">2</p>
+    </div>
+    <div class="droppable" id="droppable3">
+        <p>3</p>
+    </div>
+    <div class="droppable" id="droppable4">
+        <p>4</p>
+    </div>
+    <div class="droppable" id="droppable5">
+        <p>5</p>
+    </div>
+    <div class="droppable" id="droppable6">
+        <p>6</p>
+    </div>
+    <div class="droppable" id="droppable7">
+        <p class="minus">-3</p>
+        <p class="number">7</p>
+    </div>
+    <div class="droppable" id="droppable8">
+        <p>8</p>
+    </div>
+    <div class="droppable" id="droppable9">
+        <p>9</p>
+    </div>
+    <div class="droppable" id="droppable10">
+        <p>10</p>
+    </div>
+    <div class="droppable" id="droppable11">
+        <p>11</p>
+    </div>
+    <div class="droppable" id="droppable12">
+        <p>12</p>
+    </div>
+    <div class="droppable" id="droppable13">
+        <p>13</p>
+    </div>
+    <div class="droppable" id="droppable14">
+        <p>14</p>
+    </div>
+    <div class="droppable" id="droppable15">
+        <p class="plus">+4</p>
+        <p class="number">15</p>
+    </div>
+    <div class="droppable" id="droppable16">
+        <p class="minus">-2</p>
+        <p class="number">16</p>
+    </div>
+    <div class="droppable" id="droppable17">
+        <p>17</p>
+    </div>
+    <div class="droppable" id="droppable18">
+        <p>18</p>
+    </div>
+    <div class="droppable" id="droppable19">
+        <p>19</p>
+    </div>
+    <div class="droppable" id="droppable20">
+        <p>20</p>
+    </div>
+    <div class="droppable" id="droppable21">
+        <p>21</p>
+    </div>
+    <div class="droppable" id="droppable22">
+        <p>22</p>
+    </div>
+    <div class="droppable" id="droppable23">
+        <p>23</p>
+    </div>
+    <div class="droppable" id="droppable24">
+        <p class="minus">-4</p>
+        <p class="number">24</p>
+    </div>
+    <div class="droppable" id="droppable25">
+        <p class="plus">+3</p>
+        <p class="number">25</p>
+    </div>
+    <div class="droppable" id="droppable26">
+        <p>26</p>
+    </div>
+    <div class="droppable" id="droppable27">
+        <p>27</p>
+    </div>
+    <div class="droppable" id="droppable28">
+        <p>28</p>
+    </div>
+    <div class="droppable" id="droppable29">
+        <p>29</p>
+    </div>
+    <div class="droppable" id="droppable30">
+        <p>30</p>
+    </div>
+    <div class="droppable" id="droppable31">
+        <p class="minus">-3</p>
+        <p class="number">31</p>
+    </div>
+    <div class="droppable" id="droppable32">
+        <p>32</p>
+    </div>
+    <div class="droppable" id="droppable33">
+        <p>33</p>
+    </div>
+    <div class="droppable" id="droppable34">
+        <p>34</p>
+    </div>
+    <div class="droppable" id="droppable35">
+        <p>35</p>
+    </div>
+    <div class="droppable" id="droppable36">
+        <p>36</p>
+    </div>
+    <div class="droppable" id="droppable37">
+        <p class="plus">+3</p>
+        <p class="number">37</p>
+    </div>
+    <div class="droppable" id="droppable38">
+        <p>38</p>
+    </div>
+    <div class="droppable" id="droppable39">
+        <p>39</p>
+    </div>
+    <div class="droppable" id="droppable40">
+        <p>40</p>
+    </div>
+    <div class="droppable" id="droppable41">
+        <p>41</p>
+    </div>
+    <div class="droppable" id="droppable42">
+        <p>42</p>
+    </div>
+    <div class="droppable" id="droppable43">
+        <p>43</p>
+    </div>
+    <div class="droppable" id="droppable44">
+        <p>44</p>
+    </div>
+    <div class="droppable" id="droppable45">
+        <p class="minus">-4</p>
+        <p class="number">45</p>
+    </div>
+    <div class="droppable" id="droppable46">
+        <p>46</p>
+    </div>
+    <div class="droppable" id="droppable47">
+        <p>47</p>
+    </div>
+    <div class="droppable" id="droppable48">
+        <p>48</p>
+    </div>
+    <div class="droppable" id="droppable49">
+        <p>49</p>
+    </div>
+    <div class="droppable" id="droppable50">
+        <p class="plus">+1</p>
+        <p class="number">50</p>
+    </div>
+    <div class="droppable" id="droppable51">
+        <p>51</p>
+    </div>
+    <div class="droppable" id="droppable52">
+        <p>52</p>
+    </div>
+    <div class="droppable" id="droppable53">
+        <p class="minus">-2</p>
+        <p class="number">53</p>
+    </div>
+    <div class="droppable" id="droppable54">
+        <p class="minus">-2</p>
+        <p class="number">54</p>
+    </div>
+    <div class="droppable" id="droppable55">
+        <p class="minus">-6</p>
+        <p class="number">55</p>
+    </div>
+
+    <div class="droppable" id="droppable56"></div>
+
+
+    <div class="dice-con">
+        <button class="roll" id="rollDiceButton">Roll Dice</button>
+        <!-- <div id="diceResult"></div> -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
