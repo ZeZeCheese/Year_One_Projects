@@ -1,0 +1,8 @@
+//Data types C#
+string name = "John";
+char label = 'A'; //voor 1 character, geen "" anders word het een string
+int age = 42; //voor numbers
+double weight = 95.4; //(decimal) or (float), float uses less storage: (1.1m) or (1.1f).
+bool isOpen = true;
+
+

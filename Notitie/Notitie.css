@@ -1,0 +1,312 @@
+header {
+    background-color: royalblue;
+    text-align: center;
+    color: blueviolet;
+    padding: 5%;
+}
+
+
+/* Full image background */
+/* body{
+    background-image:url(Logo.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} */
+
+/* a Link */
+.Links {
+    text-decoration: none;
+    background-color: darkcyan;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto;
+}
+
+/* Links */
+
+a:link {
+    color: aqua;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    cursor: url;
+    color: brown;
+}
+
+a:active {
+    color: blueviolet;
+}
+
+/* Effecteerdt allen maar de target link */
+
+a[target] {
+    background-color: rgb(255, 0, 0);
+}
+
+a[target="_blank"] {
+    background-color: yellow;
+}
+
+.BLC {
+    color: aquamarine;
+    text-align: right;
+}
+
+/* Effecteerdt alles met de class naam erin (niet aan elkaar zoals topcontent maar top-content */
+
+[class|="top"] {
+    background: rgb(0, 187, 255);
+}
+
+/* Effecteerd alles met de class naam (ookal is die aan elkaar) */
+
+[class^="top"] {
+    background: yellow;
+}
+
+/* Effecteerd alles dat eindicht met test (aan elkaar een los) */
+
+[class$="test"] {
+    background: rgb(255, 0, 174);
+}
+
+/* Effecteerd alles met te erin */
+
+[class*="te"] {
+    background: rgb(17, 255, 0);
+}
+
+/* Met :focus veranderd er iets als je bezig bent op een input veld */
+
+input[type=text]:focus {
+    width: 100%;
+    background-color: lightblue;
+}
+
+/*IMG in input veld  */
+
+input[type=text] {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('/Logo.gif');
+    background-size: 2%;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+
+/* Dropdown */
+
+div.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+div.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown voor img */
+
+.dropdown-img {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-img-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-img:hover .dropdown-img-content {
+    display: block;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+/* .Logo{
+    float: right;
+    width: 7%;
+    height: 7%;
+    max-height: auto;
+    outline-style: dashed;
+} */
+
+h1.nt_title {
+    font-size: 6vw;
+}
+
+/* font-style
+font-variant
+font-weight
+font-size/line-height
+font-family */
+
+div.Bookmrk {
+    font: italic small-caps bold 50px/30px Georgia, serif;
+}
+
+.ewa {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-decoration: line-through rgb(0, 4, 255) dotted 5px;
+    border: 10px solid black;
+    outline: 1px solid red;
+    outline-offset: 50px;
+    /* margin: 50px; */
+}
+
+/* Table */
+th,
+td {
+    border: 1px solid black;
+    /* border-collapse: collapse; */
+    border-radius: 10px;
+    background-color: lightcoral;
+    border-style: dashed;
+    border-color: darkred;
+    border-width: 5px;
+    border-spacing: 2px;
+}
+
+th:nth-child(odd) {
+    background-color: blueviolet;
+}
+
+
+
+/* a Link, Button */
+.button {
+    background-color: darkcyan;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+iframe {
+    border: none;
+}
+
+div.Bookmrk {
+    /* height: 300px; */
+    /* padding: 70px 0; */
+    border: 3px solid green;
+    text-align: center;
+    width: 33%;
+    background-color: yellow;
+    padding: 70px;
+    box-sizing: border-box;
+    float: left;
+
+    /* calc haalt nu 100 px van de hele scherm af */
+
+    width: calc(100% - 100px);
+    position: absolute;
+    left: 50px;
+}
+
+div.Inp {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+}
+
+div.parent_link {
+    text-align: center;
+}
+
+div.Links {
+    width: 50%;
+    margin: auto;
+}
+
+/* Float left or right samen gebruiken met display block of inline */
+
+/* Float {
+    overflow: auto */
+
+/* padding fix to orignal size
+box-sizing: border-box */
+
+.box {
+    box-sizing: border-box;
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+div.perry {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+div.perry img {
+    width: 20%;
+}
+
+div.Bookmrk a {
+    max-width: 100px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    /*order*/
+    align-items: center;
+    /*verticaal*/
+    flex-wrap: nowrap;
+    /*wrap: zorgt ervoor dat niet alles op 1 lijn word gedrukt. unlocks align-content*/
+    gap: 1em;
+    height: 200px;
+    border: 3px solid green;
+}
+
+
+
+display: inline-block;
+/* Makes the sections display side-by-side */

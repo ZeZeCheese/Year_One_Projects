@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Notitie.css">
+    <link rel="icon" type="image/x-icon" href="Logo.gif">
+    <title>Notitie</title>
+    <!-- title, style, meta, link, script and base -->
+    <!-- meta=description -->
+    <meta name="keywords" content="jo,hey,fakka">
+    <!-- Base is voor home html -->
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="nt_title">Notitie</h1>
+    </header>
+
+
+    <!-- Link -->
+    <div class="parent_link">
+        <div class="Links">
+            <a href="https://google.com/">Naam</a>
+            <!-- + target="" -->
+            <!-- Default -->
+            <a href="https://google.com/" target="_self">Self</a>
+            <!-- Nieuwe Tab -->
+
+            <!-- Opens in parent frame -->
+            <!-- <a href="https://google.com/" target="_parent">Parent</a> -->
+            <!-- Opens in full body of window -->
+            <!-- <a href="https://google.com/" target="_top">Top</a> -->
+
+            <!-- + title= hover message -->
+            <a href="https://google.com/" title="Hover message">Hidden message</a>
+
+            <!-- E-mail met mailto: -->
+            <a href="mailto:abdellatif0rabhi@gmail.com">E-mail</a>
+        </div>
+    </div>
+
+    <!-- Java -->
+
+    <p id="first"></p>
+
+    <!-- Dropdown -->
+
+    <div class="dropdown">
+        <span>Dropdown</span>
+        <div class="dropdown-content">
+            <p>Hello</p>
+            <p>World</p>
+        </div>
+    </div>
+
+    <div class="dropdown-img">
+        <img src="/Logo.gif" alt="Ewa" width="100" height="50">
+        <div class="dropdown-img-content">
+            <img src="/Logo.gif" alt="Ewa" width="300" height="200">
+            <div class="desc">Dit is een drop voor img</div>
+        </div>
+    </div>
+
+    <!-- Bookmark Link -->
+    <div class="Bookmrk">
+        <p> <a href="#BLC">Bookmark</p>
+    </div>
+
+    <!-- Images -->
+
+    <img class="Logo" src="Logo.gif" width="638" height="640">
+    <!-- Alternatief voor img -->
+    <img class="ewa" src="url" alt="Als er geen img is zie je dit">
+    <!-- Images With link -->
+    <a href="https://google.com/">
+        <img class="Logo" src="Logo.gif" width="50" height="50"></a>
+    <!-- Area to click with links -->
+    <div class="perry">
+        <img class="Logo" src="Logo.gif" usemap="#workmap" width="638" height="640">
+    </div>
+
+    <!-- Audio -->
+
+    <audio autoplay>
+        <source src="file.mp3" type="audio/mpeg">
+        <source src="file.ogg" type="audio/ogg">
+        Audio not supported
+    </audio>
+
+    <!-- Video -->
+
+    <video autoplay muted>
+        <source src="videofile.mp4" type="video/mp4">
+        <source src="videofile.ogg" type="video/ogg">
+    </video>
+
+    <!-- Java -->
+    <!-- Hide -->
+    <button class="hide_btn" type="button" onclick="document.getElementById('hide').style.display='none'">Hide!</button>
+    <!-- Show -->
+    <button class="show_btn" type="button"
+        onclick="document.getElementById('hide').style.display='block'">Show!</button>
+
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" href="https://youtube.com/">
+    </map>
+
+    <!-- Circle area  -->
+    <map name="workmap">
+        <area shape="circle" coords="337,300,44" onclick="myFunction()" href="https://x.com/">
+    </map>
+    <!-- Picture window groter of kleiner veranderd de img -->
+    <picture>
+        <source id="show" media="(min-width:750px)" srcset="ZeZe_White.jpg">
+        <img id="hide" src="Logo.gif" width="800" height="800">
+    </picture>
+
+    <!-- Table -->
+
+    <table style="width: 100%;">
+        <tr>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+        </tr>
+        <!-- colspan en rowspan voor meerdere vakken in 1 -->
+        <tr>
+            <td rowspan="2">
+                </tdrowspan>Ewa</td>
+            <td colspan="2">
+                </tdcolspan>Hello</td>
+        </tr>
+        <tr>
+            <td>Hello</td>
+            <td>Hello</td>
+        </tr>
+    </table>
+
+
+    <!-- Button -->
+
+    <button class="button">Button</button>
+    <!-- JV. Als geklikt doe dan een functie -->
+    <button onclick="myFunction()">On_Button</button>
+
+    <!-- Lists -->
+
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+
+
+
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+
+    <!-- Span -->
+    <div> hou <span class="Span">je</span> bek</div>
+
+    <!-- iframe Laat een web pagina zien in een webpagina -->
+    <iframe src="https://www.youtube.com/watch?v=eWRfhZUzrAc" height="200" width="300" title="Ewa"></iframe>
+    <framename></framename>
+    <br>
+
+    <!-- Computercode -->
+
+    <!-- <kbd>,<code>,<samp>: allemaal zelfde font -->
+    <!-- Keyboard inputs -->
+    <kbd>enter + space</kbd>
+
+    <!-- + pre extra white space -->
+    <code>y = 4, x = 5</code>
+    <pre><code>y = 4, x = 5</code></pre>
+
+    <!-- Forms -->
+
+    <form>
+        <!-- text -->
+        <label for="text">text:</label><br>
+        <input type="text" id="text" name="text" value="Typ iets hierin">
+
+        <!-- Radio = een ronde knop -->
+        <input type="radio" name="fav_language">
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label>
+
+        <input type="checkbox">
+        <input type="submit">
+        <input type="button">
+
+        <!-- php -->
+        <form action="/action_page.php">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" value="John"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </form>
+
+    <!-- Inputs -->
+    <div class="Inp">
+        <input type="button">
+        <input type="checkbox">
+        <input type="color">
+        <input type="date">
+        <input type="datetime-local">
+        <input type="email">
+        <input type="file">
+        <input type="hidden">
+        <input type="image">
+        <input type="month">
+        <input type="number">
+        <input type="password">
+        <input type="radio">
+        <input type="range">
+        <input type="reset">
+        <input type="search">
+        <input type="submit">
+        <input type="tel">
+        <input type="text">
+        <input type="time">
+        <input type="url">
+        <input type="week">
+    </div>
+
+    <!-- Flexbox -->
+
+    <div class="center">
+        <p>I am vertically and horizontally centered.</p>
+    </div>
+
+    <!-- Float -->
+
+    <div class="clearfix">
+        <div class="box" style="background-color:#bbb">
+            <p>Some text inside the box.</p>
+        </div>
+        <div class="box" style="background-color:#ccc">
+            <p>Some text inside the box.</p>
+        </div>
+        <div class="box" style="background-color:#ddd">
+            <p>Some text inside the box.</p>
+        </div>
+    </div>
+
+
+    <!-- Characters and entities -->
+
+    <!-- <	less than	&lt;	&#60;	
+            >	greater than	&gt;	&#62;	
+            &	ampersand	&amp;	&#38;	
+            "	double quotation mark	&quot;	&#34;	
+            '	single quotation mark	&apos;	&#39;	
+            ¢	cent	&cent;	&#162;	
+            £	pound	&pound;	&#163;	
+            ¥	yen	&yen;	&#165;	
+            €	euro	&euro;	&#8364;	
+            ©	copyright	&copy;	&#169;	
+            ®	trademark	&reg;	&#174; -->
+
+    <!-- Accents -->
+
+    <!-- ̀	a	a&#768;	à	
+            ́	a	a&#769;	á	
+            ̂ 	a	a&#770;	â	
+            ̃	a	a&#771;	ã	
+            ̀	O	O&#768;	Ò	
+            ́	O	O&#769;	Ó	
+            ̂	O	O&#770;	Ô	
+            ̃	O	O&#771;	Õ -->
+
+    <!-- Mathematical and Symbols -->
+
+    <!-- ∀	&#8704;	&forall;	For all	
+            ∂	&#8706;	&part;	Partial differential	
+            ∃	&#8707;	&exist;	There exists	
+            ∅	&#8709;	&empty;	Empty sets	
+            ∇	&#8711;	&nabla;	Nabla	
+            ∈	&#8712;	&isin;	Element of	
+            ∉	&#8713;	&notin;	Not an element of	
+            ∋	&#8715;	&ni;	Contains as member	
+            ∏	&#8719;	&prod;	N-ary product	
+            ∑	&#8721;	&sum;	N-ary summation -->
+
+    <!-- Greek Symbols -->
+
+    <!-- Α	&#913;	&Alpha;	GREEK ALPHA	
+            Β	&#914;	&Beta;	GREEK BETA	
+            Γ	&#915;	&Gamma;	GREEK GAMMA	
+            Δ	&#916;	&Delta;	GREEK DELTA	
+            Ε	&#917;	&Epsilon;	GREEK EPSILON	
+            Ζ	&#918;	&Zeta;	GREEK ZETA -->
+
+    <!-- Extra Symbols -->
+
+    <!-- ©	&#169;	&copy;	COPYRIGHT	
+            ®	&#174;	&reg;	REGISTERED	
+            €	&#8364;	&euro;	EURO SIGN	
+            ™	&#8482;	&trade;	TRADEMARK	
+            ←	&#8592;	&larr;	LEFT ARROW	
+            ↑	&#8593;	&uarr;	UP ARROW	
+            →	&#8594;	&rarr;	RIGHT ARROW	
+            ↓	&#8595;	&darr;	DOWN ARROW	
+            ♠	&#9824;	&spades;	SPADE	
+            ♣	&#9827;	&clubs;	CLUB	
+            ♥	&#9829;	&hearts;	HEART	
+            ♦	&#9830;	&diams;	 DIAMOND -->
+
+
+    <!-- Bookmark Location with id= -->
+    <h1 class="BLC" id="BLC">Bookmark LC</h1>
+
+    <script src="Notite.js"></script>
+    <!-- met defer kan je thew script tag boven bij de header zetten, want nu wacht de script met laden totdat the html geladen is. -->
+    <!-- <script src="Notite.js" defer></script> -->
+
+
+</body>
+
+</html>
