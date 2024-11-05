@@ -1,0 +1,27 @@
+body {
+    cursor: url(https://cdn.custom-cursor.com/db/cursor/32/Cheese.png), default !important;
+    margin: 0;
+    overflow: hidden;
+}
+
+#gameContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+
+#movingMouse {
+    width: 4%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: left 5s linear;
+}
+
+#scoreBoard {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #195;
+}
