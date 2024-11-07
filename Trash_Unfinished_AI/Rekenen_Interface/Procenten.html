@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Procenten.css">
+    <title>Procenten</title>
+</head>
+
+<body>
+
+    <div class="containerTop">
+        <div class="kies">
+            <select id="selectKies" onchange="checkInput()">
+                <option value="">Kies...</option>
+                <option value="1">Van</option>
+                <option value="2">Afname</option>
+                <option value="3">Toename</option>
+            </select>
+            <label for="percentage">Percentage</label>
+            <input type="text" id="percentage" onchange="checkInput()">
+            <label for="xFactor">Vermenigvuldingsfactor</label>
+            <input type="text" id="xFactor" disabled>
+        </div>
+    </div>
+
+    <div class="containerMid">
+        <div class="oud">
+            <h1>Oud</h1>
+            <p>Denk ook aan:</p>
+            <ul>
+                <li>zonder BTW</li>
+                <li>zonder korting</li>
+            </ul>
+            <input type="text" id="old" onchange="checkInput()">
+        </div>
+
+        <div class="new">
+            <h1>New</h1>
+            <p>Denk ook aan:</p>
+            <ul>
+                <li>zonder BTW</li>
+                <li>zonder korting</li>
+            </ul>
+            <input type="text" id="new" onchange="checkInput()">
+        </div>
+    </div>
+
+    <div class="containerBot">
+        <div class="los_op">
+            <h1>Division</h1>
+            <label for="division">Division</label>
+            <input type="text" id="division" disabled>
+            <button id="losOp" type="button" disabled onclick="solveProblem()">Los op</button>
+        </div>
+    </div>
+
+    <script src="Procenten.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="Sudoku.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="container-1">
+            <div><button class="genarate" onclick="generateSudoku()">Nieuwe Sudoku</button>
+                <table class="knoppen">
+                    <tr>
+                        <td><button type="button" class="btn" onclick="plaatsCijfer(1)">1</button></td>
+                        <td><button type="button" class="btn" onclick="plaatsCijfer(2)">2</button></td>
+                        <td><button type="button" class="btn" onclick="plaatsCijfer(3)">3</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn" onclick="plaatsCijfer(4)">4</button></td>
+                        <td><button type="button" class="btn" onclick="plaatsCijfer(5)">5</button></td>
+                        <td><button type="button" class="btn" onclick="plaatsCijfer(6)">6</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn" onclick="plaatsCijfer(7)">7</button></td>
+                        <td><button type="button" class="btn" onclick="plaatsCijfer(8)">8</button></td>
+                        <td><button type="button" class="btn" onclick="plaatsCijfer(9)">9</button></td>
+                    </tr>
+                </table>
+                <div class="container-2">
+                    <main id="sudoku"></main>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="Sudoku.js"></script>
+
+</body>
+
+</html>

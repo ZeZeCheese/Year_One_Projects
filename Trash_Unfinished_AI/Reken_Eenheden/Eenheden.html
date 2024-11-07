@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Eenheden.css">
+    <title>Eenheden Sprongen</title>
+</head>
+<body>
+
+<main>
+    <h1>Sprongen</h1>
+
+    <div class="container-test">
+    
+            <label for="dim">Kies een dimensie:</label>
+                <select name="dim" id="dim_select">
+                    <option value="">m</option>
+                    <option value="2">m²</option>
+                    <option value="3">m³</option>
+                </select>
+            <button class="btn-bereken" onclick="makeProblem()">Bereken</button>
+
+        <br>
+    
+            <label for="vraag">Hoeveel:</label>
+            <input type="text" id="inp_left" name="hvl" value="" disabled>
+            <span class="vraag_eenheid" id="eenheid_left">km</span>
+            <label for="antwoord">Antwoord:</label>
+            <input type="text" id="inp_right" name="answer" value="">
+            <span class="antwoord_eenheid" id="eenheid_right">mm</span>
+            <button class="btn-controleer" onclick="checkSolution()">Controleer</button>
+        
+
+    </div>
+
+<script src="Eenheden.js"></script>
+
+</main>
+    
+</body>
+</html>

@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(177, 172, 172);
+    font-size: 17px;
+    overflow-y: hidden;
+}
+
+input {
+    border-radius: 35px;
+}
+
+select {
+    border-radius: 35px;
+}
+
+
+div.containerTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 33, 33vh;
+}
+
+div.kies {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-around;
+    border: 5px solid rgb(67, 67, 67);
+    padding: 1%;
+    width: 350px;
+    height: 230px;
+    border-radius: 15px;
+    background-color: gray;
+}
+
+div.containerMid {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 33vh;
+}
+
+div.oud {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid rgb(67, 67, 67);
+    padding: 1%;
+    width: 350px;
+    height: 230px;
+    border-radius: 15px;
+    background-color: gray;
+
+}
+
+div.new {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid rgb(67, 67, 67);
+    padding: 1%;
+    width: 350px;
+    height: 230px;
+    border-radius: 15px;
+    background-color: gray;
+}
+
+div.containerBot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 33vh;
+}
+
+div.los_op {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-around;
+    border: 5px solid rgb(67, 67, 67);
+    padding: 1%;
+    width: 350px;
+    height: 230px;
+    border-radius: 15px;
+    background-color: gray;
+}
+
+button#losOp {
+    margin: auto;
+    height: 50px;
+    width: 100px;
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgb(75, 222, 158);
+    border: 1px;
+}

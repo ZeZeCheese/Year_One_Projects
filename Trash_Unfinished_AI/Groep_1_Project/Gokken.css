@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:link{color: black;}
+a:visited{color: black;}
+a:hover{color: black;}
+a:active{color: black;}
+
+div.con{
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-type: x mandatory;
+  overflow: auto;
+  /* overflow-y: hidden; */
+  white-space: nowrap;
+  background-color: aqua;
+  scroll-behavior: smooth;
+}
+
+div.place{
+  background-color: brown;
+  height: 100vh;
+  width: 100vw;
+  white-space: nowrap;
+}
+
+button.Start_btn{
+  position: relative;
+  top: 30%;
+  left: 45%;
+  width: 10%;
+  height: 10%;
+  background-color: chartreuse;
+  border-radius: 25px;
+}
+
+button.Settings_btn{
+  position: relative;
+  top: 42%;
+  left: 34.8%;
+  width: 10%;
+  height: 10%;
+  background-color: chartreuse;
+  border-radius: 25px;
+}
+
+button.Credits_btn{
+  position: relative;
+  top: 54%;
+  left: 24.6%;
+  width: 10%;
+  height: 10%;
+  background-color: chartreuse;
+  border-radius: 25px;
+}
+
+button.Back_btn{
+  position: relative;
+  top: 90%;
+  left: 2%;
+  width: 2%;
+  height: 5%;
+  background-color: chartreuse;
+  border-radius: 25px;
+}
+
+button.Next_btn{
+  position: relative;
+  top: 90%;
+  left: 94%;
+  width: 2%;
+  height: 5%;
+  background-color: chartreuse;
+  border-radius: 25px;
+}
+
+button.Home_btn{
+  position: relative;
+  top: 90%;
+  left: 90%;
+  width: 5%;
+  height: 5%;
+  background-color: chartreuse;
+  border-radius: 25px;
+}
+
+section{
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 20vh;
+}
+
+section:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+section:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+section.one{
+  background-color: blueviolet;
+}
+
+section.two{
+  background-color:black;
+}
+
+section.three{
+  background-color: rgb(46, 43, 226);
+}

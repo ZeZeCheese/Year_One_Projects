@@ -1,0 +1,12 @@
+body {
+    background-color: darkred;
+    color: aqua;
+    font-size: 100px;
+    font-family:Cursive, "Brush Script MT";
+  
+  .p1 {
+    color: chartreuse;
+    font-size: xx-small;
+  }
+  
+  }

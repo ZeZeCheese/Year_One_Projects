@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reken App</title>
+    <link rel="stylesheet" href="Reken_App.css">
+</head>
+<body>
+
+    <div class="Row">
+        <div class="col">
+             <form class="row g-3 mb-2">
+               <div class="col-md-4">
+                 <label for="inputtafelvan" class="form-label">Tafel van</label>
+                 <input type="number" class="form-control" id="inputtafelvan">
+               </div>
+               <div class="col-md-4">
+                 <label for="inputtafeltot" class="form-label">Tafel tot</label>
+                 <input type="number" class="form-control" id="inputtafeltot">
+               </div>
+               <div class="col-md-6-mt-5">
+                   <button type="button" class="btn btn-success" onclick="showOpdracht()">GO</button>
+               </div>
+             </form>
+        </div>
+    <div class="card text-center">
+        <div class="card-header">
+            Tafel van ... oefenen
+        </div>
+        <div id="tafel" class="card-body">
+            <div class="input-group mb-3">
+                <input id="inputOpdracht" type="text" class="form-control" placeholder="Som" disabled>
+                <span class="input-group-text">=</span>
+                <input id= "inputOplossing" type="text" class="form-control" placeholder="Antwoord">
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-success" onclick="checkOplossing()">Check oplossing</button>
+              </div>
+        </div>
+
+    </div>
+</div>
+<div class="col"></div>
+</div>
+
+
+      <div id="tafel" class="card-body"></div>
+
+      <script src="Reken_App.js"></script>
+
+</body>
+
+</html>

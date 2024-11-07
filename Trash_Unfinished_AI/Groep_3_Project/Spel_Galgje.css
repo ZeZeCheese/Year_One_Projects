@@ -1,0 +1,129 @@
+body {
+    background-color: #fa8072;
+    font-family: cursive;
+}
+.container {
+    margin-top: 50px;
+}
+h1 {
+    text-align: center;
+    font-size: 36px;
+}
+.card {
+    margin: 0 auto;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+#message {
+    text-align: center;
+    font-size: 24px;
+}
+#word {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+}
+#keyboard {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+}
+#hangman {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+}
+#hangman-bar {
+    width: 100%;
+    background-color: #eee;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+}
+#hangman-fill {
+    width: 0;
+    height: 100%;
+    background-color: red;
+    overflow: hidden;
+}
+
+.flexstart {
+    display: flex;
+}
+
+.navbar {
+    margin: 10px;
+    background-color: #fbd633;
+    border-radius: 10px;
+    position: sticky; 
+    top:0%;
+    min-width: 90%;
+}
+
+.topnav {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    overflow: hidden;
+  }
+  
+.topnav a {
+    float: left;
+    color :   black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+.topnav input[type=text] {
+    float: right;
+    margin: 14px 16px;
+    border: none;
+    font-size: 20px;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 10px;
+}
+  
+.topnav a.active {
+    color: white;
+}
+
+.logo {
+    max-width: 75px;
+    max-height: 75px;
+    border-radius: 10px;
+}
+
+.btn-primary { 
+    border: black solid 3px;
+    margin: 3px;
+    background-color: #fbd633;
+    min-width: 40px;
+    min-height: 20px;
+    order: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.btn-primary:hover {
+    background-color: #fae690
+}
+
+.btn-primary:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.resetgalgje {
+    background-color: #fbd633;
+    min-width: 100px;
+    min-height: 100px;
+    border: fbd633 solid 5px;
+    border-radius: 100%;
+}
